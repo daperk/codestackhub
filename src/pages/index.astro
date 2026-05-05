@@ -1,0 +1,27 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+
+const metadata = {
+  title: 'CodeStackHub — Honest reviews, real tradeoffs',
+};
+---
+
+<Layout metadata={metadata}>
+  <Hero
+    tagline="Welcome to CodeStackHub"
+  >
+    <Fragment slot="title">
+      CodeStackHub
+    </Fragment>
+    <Fragment slot="subtitle">
+      Production-grade tradeoffs across IDEs, frameworks, and infrastructure.
+    </Fragment>
+  </Hero>
+
+  <BlogLatestPosts
+    title="Latest Guides"
+    information={`Hands-on, no-fluff reviews and how-to guides.`}
+  />
+</Layout>
